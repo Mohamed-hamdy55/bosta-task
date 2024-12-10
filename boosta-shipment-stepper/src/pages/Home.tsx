@@ -11,8 +11,8 @@ const Home = () => {
         <Header />
         {/* Pass the search handler to SearchComponent */}
         <SearchComponent />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };
