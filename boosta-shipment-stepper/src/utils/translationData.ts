@@ -8,7 +8,7 @@ const translationLanguages = {
         "Your order is expected to arrive within 2-3 working days":"Your order is expected to arrive within 2-3 working days",
         "Tracking Details":"Tracking Details",
         "Show more details":"Show more details",
-        "Empty Search is not allowed":"Show more details",
+        "Empty Search is not allowed":"Empty Search is not allowed",
         "Invalid tracking number":"Invalid traking number",
         "Pick Up":"Pick Up",
         "Processing":"Processing",
