@@ -17,7 +17,7 @@ const ShipmentTrakingHeader = ({ shipmentData }: { shipmentData: any }) => {
 
   return (
     <div>
-      <span className="text-sm font-[600] text-gray-700">
+      <span className="text-sm font-[600] text-gray-500">
         {trans("ORDER")} #{shipmentData.TrackingNumber}
       </span>
       <div className="border-b border-b-gray-400">
