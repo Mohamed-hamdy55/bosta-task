@@ -25,7 +25,7 @@ const SearchComponent = () => {
     <section className="relative w-full flex flex-col items-center  mt-[130px] bg-[#f3fafb] rounded-sm">
       <div className={`${styles.normalFlex} flex-col text-center`}>
         <div>
-          <img fetchPriority="high" src="https://bosta.co/ac8dbe8ae2210d1a650279fb14d01f7e.png" alt="tracking-icon" />
+          <img rel="preload" fetchPriority="high" src="https://bosta.co/ac8dbe8ae2210d1a650279fb14d01f7e.png" alt="tracking-icon" />
         </div>
         <h1 className="font-semibold text-[35px] mb-10 mt-5">{trans("Track Your Order")}</h1>
         <p>{trans("All order updates will be available through this link")}</p>
