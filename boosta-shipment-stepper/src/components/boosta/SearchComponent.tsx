@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const SearchComponent = ({isVisible:boolean}) => {
+const SearchComponent = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const trans = useTranslate();
