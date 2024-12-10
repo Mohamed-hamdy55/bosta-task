@@ -46,6 +46,8 @@ const SearchComponent = () => {
             className="w-full rounded-l-md focus:outline-none focus:border focus:border-[#e30613] p-[20px] border border-[#e4e7ec]"
           />
           <button
+            id="search-submit-btn"
+            name="search-submit-btn"
             type="submit"
             className="bg-[#e30613] absolute left-[calc(100%-15px)]  h-full w-fit pr-4 pl-4 pt-2 pb-2 rounded-r-md"
           >

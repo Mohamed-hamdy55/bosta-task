@@ -9,7 +9,7 @@ const HeaderLogo = () => {
     (state: RootState) => state.language.currentLanguage
   );
   return (
-    <Link to="/">
+    <Link to="/" title="logo">
     {
       currentLanguage === "en" ? <Logo  /> : <Ar_Logo  />
     }
