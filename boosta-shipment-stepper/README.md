@@ -84,6 +84,7 @@ Provide a brief overview of the project here. *(We'll write this together once c
 
 - **Node.js**: Version `v20.17.0` or higher.  
 - **npm** or **yarn**: For package management.
+- **.env file**: look at the "Environment Variables" part
 
 ### Installation
 
@@ -120,12 +121,17 @@ npm run dev
 
 ### Video
 
+https://github.com/user-attachments/assets/0392f6de-95dc-4eec-ab65-e5520962cc1b
+
+
 
 ---
 
 ## 🌍 Environment Variables
+Create a '.env" file in the root of the directory and add:
+ VITE_SERVER_BASE_URL = "https://bostaLinkExample.co"
 
-List and explain the `.env` file variables here. *(Will be completed after reviewing file content.)*
+to use it "import.meta.env.VITE_SERVER_BASE_URL" or any other enviroment variable "import.meta.env.<name>"
 
 ---
 
