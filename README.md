@@ -136,7 +136,7 @@ to use it "import.meta.env.VITE_SERVER_BASE_URL" or any other enviroment variabl
 
 ## 🎥 Live Perview
 
-Link: bosta-task-umber.vercel.app
+Link: [bosta-task-umber.vercel.app](https://bosta-task-umber.vercel.app/)
 
 ---
 
