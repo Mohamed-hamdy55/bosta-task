@@ -3,8 +3,9 @@ import Footer from "@components/common/Footer";
 import Header from "@components/common/Header";
 
 import styles from "@styles/styles";
+import React from "react";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <main className={`${styles.normalFlex} flex-col min-h-screen`}>

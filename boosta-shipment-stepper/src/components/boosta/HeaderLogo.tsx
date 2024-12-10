@@ -1,10 +1,11 @@
+import React from "react";
 import Logo from "@assets/logo.svg?react";
 import Ar_Logo from "@assets/ar_logo.svg?react";
 import { useSelector } from "react-redux";
 import { RootState } from "@store/store";
 import { Link } from "react-router-dom";
 
-const HeaderLogo = () => {
+const HeaderLogo: React.FC = () => {
   const currentLanguage = useSelector(
     (state: RootState) => state.language.currentLanguage
   );

@@ -1,10 +1,33 @@
-import { useTranslate } from "@hooks/useTranslate";
 import styles from "@styles/styles";
 import ShipmentTrakingHeader from "./ShipmentTrakingHeader";
 import TrackingDetails from "./TrackingDetails";
+interface TrackingStepperProps {
+  shipmentData: {
+    provider: string;
+    CurrentStatus: {
+      state: string;
+      timestamp: string;
+    };
+    PromisedDate: string;
+    TrackingNumber: number;
+    TrackingURL: string;
+    SupportPhoneNumbers: [string];
+    TransitEvents: [{
+        state: string;
+        timestamp: string;
+        hub: string | null;
+    }],
+    CreateDate: string;
+    isEditableShipment: boolean;
+    nextWorkingDay: [{
+      dayDate:string;
+      dayName:string;
+    }];
+    isOnlinePaymentFeatureEnabled: boolean;
+  };
+}
 
-const TrackingStepper = ({ shipmentData }: { shipmentData: any }) => {
-  const trans = useTranslate();
+const TrackingStepper: React.FC<TrackingStepperProps> = ({ shipmentData }) => {
 
   return (
     <section className={`${styles.container} mt-[50px] `}>

@@ -8,6 +8,9 @@ const translationLanguages = {
         "Your order is expected to arrive within 2-3 working days":"Your order is expected to arrive within 2-3 working days",
         "Tracking Details":"Tracking Details",
         "Show more details":"Show more details",
+        "Empty Search is not allowed":"Show more details",
+        "Invalid tracking number":"Invalid traking number",
+
 
     },
 
@@ -20,6 +23,9 @@ const translationLanguages = {
         "Your order is expected to arrive within 2-3 working days":"من المرجح ان طلبك سوف يصل خلال يومين او ثلاثة أيام العمل",
         "Tracking Details":"تفاصيل التتبع",
         "Show more details":"عرض المزيد من التفاصيل",
+        "Empty Search is not allowed":"البحث الفارغ غير مسموح به",
+        "Invalid tracking number":"رقم التتبع خطأ",
+
     }
 }
 

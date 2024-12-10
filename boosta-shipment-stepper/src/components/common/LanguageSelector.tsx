@@ -18,7 +18,7 @@ const LanguageSelector: React.FC = () => {
     <div className={`${styles.normalFlex}`}>
       {/* Chanage language button */}
       <button
-        className="text-white  p-2 border rounded-md bg-[#e30613] font-[500] w-20"
+        className="text-white  p-2 border rounded-md bg-[#e30613] font-[500] w-20 dark:bg-white dark:text-black"
         type="button"
         onClick={() => {
           handleChange();

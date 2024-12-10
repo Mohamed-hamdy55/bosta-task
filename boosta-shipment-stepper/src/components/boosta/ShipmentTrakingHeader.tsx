@@ -1,7 +1,36 @@
 import { useTranslate } from "@hooks/useTranslate";
 import { formatDate } from "@utils/formateDate";
+import React from "react";
 
-const ShipmentTrakingHeader = ({ shipmentData }: { shipmentData: any }) => {
+interface ShipmentTrackingHeaderProps {
+  shipmentData: {
+    provider: string;
+    CurrentStatus: {
+      state: string;
+      timestamp: string;
+    };
+    PromisedDate: string;
+    TrackingNumber: number;
+    TrackingURL: string;
+    SupportPhoneNumbers: [string];
+    TransitEvents: [{
+        state: string;
+        timestamp: string;
+        hub: string | null;
+    }],
+    CreateDate: string;
+    isEditableShipment: boolean;
+    nextWorkingDay: [{
+      dayDate:string;
+      dayName:string;
+    }];
+    isOnlinePaymentFeatureEnabled: boolean;
+  };
+}
+
+const ShipmentTrakingHeader: React.FC<ShipmentTrackingHeaderProps> = ({
+  shipmentData,
+}) => {
   const trans = useTranslate();
 
   const isInTransit: boolean =
@@ -10,17 +39,17 @@ const ShipmentTrakingHeader = ({ shipmentData }: { shipmentData: any }) => {
     shipmentData.CurrentStatus.state != "Returned" &&
     shipmentData.CurrentStatus.state != "RETURNED";
 
-  const dayToArrive: string = formatDate(new Date(shipmentData.PromisedDate));
+  const dayToArrive: string = formatDate(new Date(shipmentData.PromisedDate), false);
   const lastStateDate: string = formatDate(
-    new Date(shipmentData.CurrentStatus.timestamp)
+    new Date(shipmentData.CurrentStatus.timestamp), false
   );
 
   return (
     <div>
-      <span className="text-sm font-[600] text-gray-500">
+      <span className="text-sm font-[600] text-gray-500 dark:text-gray-300">
         {trans("ORDER")} #{shipmentData.TrackingNumber}
       </span>
-      <div className="border-b border-b-gray-400">
+      <div className="border-b border-b-gray-400 dark:border-b-gray-100">
         {isInTransit ? (
           <div>
             <h1 className="text-3xl font-[600]">

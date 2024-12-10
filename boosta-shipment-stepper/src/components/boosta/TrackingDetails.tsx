@@ -1,16 +1,24 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslate } from "@hooks/useTranslate";
 import { formatDate } from "@utils/formateDate";
 import { useSelector } from "react-redux";
 import { RootState } from "@store/store";
 
-const TrackingDetails = ({ events }: { events: any[] }) => {
+interface ShipmentTrackingEventsProps {
+  events:  [{
+        state: string;
+        timestamp: string;
+        hub: string | null;
+    }];
+}
+
+const TrackingDetails: React.FC<ShipmentTrackingEventsProps> = ({events}) => {
   const trans = useTranslate();
   const currentLanguage = useSelector(
     (state: RootState) => state.language.currentLanguage
   );
   // State to toggle details visibility
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState<boolean>(false);
 
   // Group events by date
   const groupedEvents = events.reduce((acc: any, event: any) => {
@@ -30,7 +38,7 @@ const TrackingDetails = ({ events }: { events: any[] }) => {
       {/* Clickable Tracking Details Header */}
       <h3
         onClick={() => setShowDetails(!showDetails)} // Toggle details visibility
-        className="text-xl font-[600] mb-5 cursor-pointer text-gray-700 hover:text-gray-900"
+        className="inline-block text-xl font-[600] mb-5 cursor-pointer text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
       >
         {showDetails ? trans("Tracking Details") : trans("Show more details") }
       </h3>
@@ -41,7 +49,7 @@ const TrackingDetails = ({ events }: { events: any[] }) => {
           {Object.keys(groupedEvents).reverse().map((date, groupIndex) => (
             <div key={groupIndex} className="mb-8">
               {/* Display Date */}
-              <p className="text-lg font-[600] text-gray-700 mb-4 mx-10">
+              <p className="text-lg font-[600] text-gray-700 mb-4 mx-10 dark:text-gray-400">
                 {date}
               </p>
 
@@ -64,7 +72,7 @@ const TrackingDetails = ({ events }: { events: any[] }) => {
                     <div key={eventIndex} className="flex items-start mb-6">
                       {/* Event Content */}
                       <div className="border-2 rounded-md min-w-[220px] p-5">
-                        <p className="text-sm font-[600] text-gray-700">
+                        <p className="text-sm font-[600] text-gray-700 dark:text-gray-300">
                           {trans(event.state.replace(/_+/g," "))}
                         </p>
                         <p dir="ltr">{formatDate(new Date(event.timestamp), true)}</p>

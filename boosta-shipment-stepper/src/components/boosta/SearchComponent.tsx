@@ -2,19 +2,19 @@ import { useTranslate } from "@hooks/useTranslate";
 import IconComponent from "@components/utils/IconComponent";
 import { FaSearch } from "react-icons/fa";
 import styles from "@styles/styles";
-import { useState } from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const SearchComponent = () => {
-  const [query, setQuery] = useState("");
+const SearchComponent: React.FC  = () => {
+  const [query, setQuery] = useState<string>("");
   const navigate = useNavigate();
   const trans = useTranslate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) {
-      toast.error("Empty Search is not allowed");
+      toast.error(trans("Empty Search is not allowed"));
     } else {
       // Navigate with the query parameter
       navigate(`/tracking-shipments?shipment-number=${query.trim()}`);
@@ -22,10 +22,10 @@ const SearchComponent = () => {
   };
 
   return (
-    <section className="relative w-full flex flex-col items-center  mt-[130px] bg-[#f3fafb] rounded-sm">
+    <section className="relative w-full flex flex-col items-center  mt-[130px] bg-[#f3fafb] rounded-sm dark:bg-black ">
       <div className={`${styles.normalFlex} flex-col text-center`}>
         <div>
-          <img rel="preload" fetchPriority="high" src="https://bosta.co/ac8dbe8ae2210d1a650279fb14d01f7e.png" alt="tracking-icon" />
+          <img rel="preload" src="https://bosta.co/ac8dbe8ae2210d1a650279fb14d01f7e.png" alt="tracking-icon" />
         </div>
         <h1 className="font-semibold text-[35px] mb-10 mt-5">{trans("Track Your Order")}</h1>
         <p>{trans("All order updates will be available through this link")}</p>
@@ -43,7 +43,7 @@ const SearchComponent = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={trans("Enter tracking number")}
-            className="w-full rounded-l-md focus:outline-none focus:border focus:border-[#e30613] p-[20px] border border-[#e4e7ec]"
+            className="w-full rounded-l-md focus:outline-none focus:border focus:border-[#e30613] p-[20px] border border-[#e4e7ec] text-black"
           />
           <button
             id="search-submit-btn"

@@ -1,4 +1,6 @@
-const Stepper = () => {
+import React from "react";
+
+const Stepper: React.FC = () => {
   return (
     <div>
       <div className="w-[500px] mt[50px] z-20">
