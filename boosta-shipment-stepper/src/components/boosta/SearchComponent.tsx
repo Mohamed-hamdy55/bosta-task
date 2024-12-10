@@ -50,6 +50,8 @@ const SearchComponent = () => {
             name="search-submit-btn"
             type="submit"
             className="bg-[#e30613] absolute left-[calc(100%-15px)]  h-full w-fit pr-4 pl-4 pt-2 pb-2 rounded-r-md"
+            aria-label="Search"
+            title="search"
           >
             <span className="text-white">
               <IconComponent icon={FaSearch} size={35} />
