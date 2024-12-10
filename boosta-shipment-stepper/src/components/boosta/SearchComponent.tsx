@@ -35,10 +35,10 @@ const SearchComponent = () => {
           className={`relative  ${styles.normalFlex} flex-col justify-center bg-white shadow-md rounded-md`}
           onSubmit={handleSubmit}
         >
-          <label htmlFor=""></label>
+          <label htmlFor="shipment-number"></label>
           <input
-            id="shipmentId"
-            name="shipmentId"
+            id="shipment-number"
+            name="shipment-number"
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
