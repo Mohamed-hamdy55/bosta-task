@@ -12,7 +12,8 @@
   - [Installation](#installation)  
   - [Running the Application](#running-the-application)  
 - [Scripts](#scripts)  
-- [Usage](#usage)  
+- [Usage](#usage)
+  - [Video](#video)  
 - [Environment Variables](#environment-variables)  
 - [Contributing](#contributing)  
 - [License](#license)  
@@ -117,7 +118,8 @@ npm run dev
 
 ## 🛠️ Usage
 
-Provide instructions on how to use the application after it's up and running.
+### Video
+
 
 ---
 
