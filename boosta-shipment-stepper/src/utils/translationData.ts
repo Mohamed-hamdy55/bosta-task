@@ -10,6 +10,10 @@ const translationLanguages = {
         "Show more details":"Show more details",
         "Empty Search is not allowed":"Show more details",
         "Invalid tracking number":"Invalid traking number",
+        "Pick Up":"Pick Up",
+        "Processing":"Processing",
+        "Out for Delivery":"Pick Up",
+        "Delivered":"Pick Up",
 
 
     },
@@ -25,6 +29,10 @@ const translationLanguages = {
         "Show more details":"عرض المزيد من التفاصيل",
         "Empty Search is not allowed":"البحث الفارغ غير مسموح به",
         "Invalid tracking number":"رقم التتبع خطأ",
+        "Pick Up":"تم استلام الطلب",
+        "Processing":"تجهيز",
+        "Out for Delivery":"خارج للتوصيل",
+        "Delivered":"تم التوصيل",
 
     }
 }

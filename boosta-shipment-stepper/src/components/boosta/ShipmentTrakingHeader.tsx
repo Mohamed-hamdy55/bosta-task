@@ -1,6 +1,7 @@
 import { useTranslate } from "@hooks/useTranslate";
 import { formatDate } from "@utils/formateDate";
 import React from "react";
+import Stepper from "./Stepper";
 
 interface ShipmentTrackingHeaderProps {
   shipmentData: {
@@ -83,7 +84,7 @@ const ShipmentTrakingHeader: React.FC<ShipmentTrackingHeaderProps> = ({
         )}
       </div>
       <div className="mt-[20px]">
-        
+        <Stepper step={1}/>
       </div>
     </div>
   );
